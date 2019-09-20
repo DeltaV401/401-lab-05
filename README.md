@@ -5,35 +5,16 @@
 ### Jon Struve
 
 ### Links and Resources
-* [submission PR](http://xyz.com)
-* [travis](http://xyz.com)
+* [submission PR](https://github.com/DeltaV401/401-lab-05/pull/1)
+* [travis](https://travis-ci.com/DeltaV401/401-lab-05)
 
 ### Modules
-#### `modulename.js`
-##### Exported Values and Methods
-
-###### `foo(thing) -> string`
-Usage Notes or examples
-
-###### `bar(array) -> array`
-Usage Notes or examples
+None configured yet - is for part 2.
 
 ### Setup
-#### `.env` requirements
-* `PORT` - Port Number
+Nothing for this yet either.
 * `MONGODB_URI` - URL to the running mongo instance/db
-
-#### Running the app
-* `npm start`
-* Endpoint: `/foo/bar/`
-  * Returns a JSON object with abc in it.
-* Endpoint: `/bing/zing/`
-  * Returns a JSON object with xyz in it.
   
 #### Tests
-* How do you run tests?
-* What assertions were made?
-* What assertions need to be / should be made?
-
-#### UML
-Link to an image of the UML for your application and response to events
+Tests are run for everything in CRUD to make sure they're working properly.
+Each step of CRUD has an assertion made to confirm that I can create, read, update, and delete objects.
