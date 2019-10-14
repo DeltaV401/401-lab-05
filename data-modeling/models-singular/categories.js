@@ -3,29 +3,29 @@
 // Where is our schema defined?
 // How do we get it in here so we can run methods on it?
 
+const Category = require('./categories-schema');
+
 class Categories {
-
-  constructor() {
-  }
-
   get(_id) {
-    // Call the appropriate mongoose method to get
-    // one or more records
-    // If 1, return it as a plain object
-    // If 2, return it as an object like this:
-    // { count: ##, results: [{}, {}] }
+    if(_id) {
+      return Category.findOne({ _id: _id });
+    }
+    else {
+      return Category.find({});
+    }
   }
 
   create(record) {
-    // Call the appropriate mongoose method to create a new record
+    let newRecord = new Category(record);
+    return newRecord.save();
   }
 
-  update(_id, record) {
-    // Call the appropriate mongoose method to update a record
+  update(_id, changes) {
+    return Category.findByIdAndUpdate(_id, changes, { new: true });
   }
 
   delete(_id) {
-    // Call the appropriate mongoose method to delete a record
+    return Category.findByIdAndDelete(_id);
   }
 
 }
